@@ -1,0 +1,23 @@
+{
+  "name": "grouphub-to-wordpress",
+  "version": "0.0.1",
+  "authors": [
+    "bedeute <bedeute@gmail.com>"
+  ],
+  "description": "GroupHub to Wordpress",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.x",
+    "normalize-css": "1.x",
+    "multiselect": "multiselect-two-sides#^2.1.8",
+    "chosen": "^1.4.2"
+  },
+  "overrides": {}
+}

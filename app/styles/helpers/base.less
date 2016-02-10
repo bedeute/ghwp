@@ -1,0 +1,274 @@
+body {
+  color: @base;
+  font-family: @base-font-family;
+  background-color: #f9f9f9; /*helper*/
+}
+
+.ghwp-wrap {
+}
+
+.ghwp-container {
+	&:extend(.clearfix all);
+	position: relative;
+	width: 860px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+	margin: 6px auto;
+}
+
+.ghwp-header {
+	&:extend(.clearfix all);
+	z-index: 1;
+	position: relative;
+	border-bottom: 1px solid #e5e5e5;
+
+	> .ghwp-tabs-title {
+		float: left;
+	}
+
+	&-action {
+		float: right;
+		padding: 16px;
+	}
+}
+
+
+.ghwp-heading-wrap {
+	border-bottom: 1px solid #d5d5d5;
+	margin-bottom: 12px;
+	padding-bottom: 10px;
+
+	> .ghwp-title {
+		margin: 6px 0 0;
+
+		+ .ghwp-subtitle {
+			padding-top: 2px;
+		}
+	}
+}
+
+.ghwp-title {
+	color: #555;
+}
+
+.ghwp-subtitle {
+	color: #777;
+	font-size: 14px;
+	display: inline-block;
+	line-height: 18px;
+}
+
+.ghwp-tabs {
+	width: 184px;
+	padding:0;
+	float: left;
+	list-style: none;
+	text-align: center;
+	margin:0;
+
+	&:before {
+		width: 184px;
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fafafa;
+		border-right: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+
+	&-title {
+		width: 184px;
+		padding: 16px;
+		background-color: #f9f9f9;
+		border-right: 1px solid #ccc;
+		font-weight: bold;
+		color: #555;
+		text-align: center;
+		box-sizing: border-box;
+	}
+
+	> li {
+		padding: 0;
+		margin: 0;
+		position: relative;
+	}
+
+	.ghwp-tab-item {
+		padding: 12px 22px;
+		display: block;
+		color: #888;
+		border: 1px solid transparent;
+		// border-right-color: #ccc;
+		text-decoration: none;
+		transition: all 0.2s ease-in-out;
+		border-left-width: 2px;
+
+		&.current {
+			color: #555;
+			border-color: #ccc transparent #ccc @accent-color;
+			background-color: #fff;
+			outline: none;
+		}
+
+		&:hover,
+		&:focus {
+			border-left-color: @accent-color;
+			color: #555;
+		}
+	}
+}
+
+.ghwp-tab-content {
+	width: 676px;
+	float: left;
+	
+	.ghwp-tab-content-item {
+		padding: 16px 20px;
+		display: none;
+
+		&.current {
+			display: inherit;
+		}
+	}
+}
+
+.ghwp-init-bttn {
+	position: absolute;
+	top: 0;
+	padding-top: 40px;
+	bottom: 0;
+	left: 184px;
+	right: 0;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.75);
+	z-index: 1;
+
+	&:before {
+		// content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	// > a {
+	// 	display: inline-block;
+	// 	background-color: @accent-color;
+	// 	padding: 8px 18px;
+	// 	color: #fff;
+	// 	text-decoration: none;
+	// 	border: 1px solid darken(spin(@accent-color, -5), 4%);
+	// }
+}
+
+.form-ctrl {
+	display: block;
+	width: 100%;
+	height: 34px;
+	border: 1px solid #ccc;
+	padding: 6px 12px;
+	background-color: #fff;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+	box-sizing: border-box;
+}
+
+.ghwp-form-group {
+	&:extend(.clearfix all);
+	margin-bottom: 16px;
+
+	> label {
+		float: left;
+		padding-top: 8px;
+		width: 25%;
+	}
+
+	> .ctrl-label {
+		width: 75%;
+		float: left;
+
+		&-inline {
+
+			> select,
+			> input[type="text"] {
+				display: inline-block;
+				width: auto;
+			}
+		}
+	}
+}
+
+.ghwp-reg-community-wrap {
+	&:extend(.clearfix all);
+
+	select {
+		outline: none;
+		min-height: 200px;
+		overflow: auto;
+		padding: 0;
+
+		> option,
+		> optgroup {
+			padding: 6px 16px;
+		}
+	}
+
+	.ghwp-subtitle {
+		margin: 6px 0 2px;
+	}
+
+}
+
+.ghwp-unreg-community {
+	float: left;
+	box-sizing: border-box;
+	width: 45%;
+}
+
+.ghwp-reg-action {
+	float: left;
+	box-sizing: border-box;
+	width: 10%;
+	list-style: none;
+	margin: 26px 0 0;
+	padding: 0;
+
+	> li {
+		width: 80%;
+		margin: 5px auto;
+		padding: 0;
+
+		> a {
+			display: block;
+	    background: #f9f9f9;
+	    border: 1px solid #ccc;
+	    padding: 10px 0;
+	    outline: none;
+	    width: 100%;
+	    text-align: center;
+	    color: #777;
+
+	    &:hover,
+	    &:focus {
+	    	background-color: #f2f2f2;
+	    	color: @accent-color;
+	    }
+
+	    .ftl-reverse {
+	    	&:before {	
+		    	transform: rotate(180deg);
+	    	}
+	    }
+		}
+	}
+}
+
+.ghwp-regd-community {
+	float: left;
+	box-sizing: border-box;
+	width: 45%;
+}

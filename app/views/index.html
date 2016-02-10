@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9 ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10 ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GroupHub to Wordpress">
+  <meta name="keywords" content="html5, css3, GroupHub to Wordpress">
+  <title>
+    GroupHub to Wordpress :: Home
+  </title>
+
+  <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+  <link rel="stylesheet" href="styles/app.css">
+  <!--head:js-->
+  <!--/head:js-->
+  <!-- @endif -->
+
+  <!-- @if NODE_ENV == 'DISTRIBUTION' -->
+  <link rel="stylesheet" href="styles/app.min.css">
+  <script src="scripts/head.all.min.js"></script>
+  <!-- @endif -->
+</head>
+<body style="padding-top: 60px;">
+  <div class="ghwp-wrap">
+    <div class="ghwp-container">
+      <div class="ghwp-header">
+        <div class="ghwp-tabs-title">Grouphub to Wordpress</div>
+        <div class="ghwp-header-action"><a href="#" class="bttn bttn-success">Save</a></div>
+      </div>
+      <ul class="ghwp-tabs">
+        <!-- <li class="ghwp-tabs-title">Grouphub to Wordpress</li> -->
+        <li><a href="#generalSetting" class="ghwp-tab-item">General Setting</a></li>
+        <li><a href="#askSetting" class="ghwp-tab-item">Ask Setting</a></li>
+        <li><a href="#blogSetting" class="ghwp-tab-item">Blog Setting</a></li>
+        <li><a href="#eventSetting" class="ghwp-tab-item">Event Setting</a></li>
+      </ul>
+      <div class="ghwp-tab-content">
+       <!--  <div class="ghwp-init-bttn">
+          <p class="ghwp-subtitle" style="display: block;">You must connect to your GroupHub account<br>to make this plugins works.</p>
+          <a href="#" class="bttn bttn-main">Connect with GroupHub</a>
+        </div> -->
+        <div class="ghwp-tab-content-item" id="generalSetting">
+          <div class="ghwp-form-group">
+            <label for="appId">App Id</label>
+            <div class="ctrl-label">
+              <input type="text" id="appId" class="form-ctrl">
+            </div>
+          </div>
+          <div class="ghwp-form-group">
+            <label for="userId">User Id</label>
+            <div class="ctrl-label">
+              <input type="text" id="userId" class="form-ctrl">
+            </div>
+          </div>
+          <!-- <div>
+            <a href="#" class="bttn bttn-success"><i class="icon-plus-outline"></i>Add community</a>
+          </div> -->
+          <div class="clearfix ghwp-reg-community-wrap">
+            <div class="ghwp-heading-wrap">
+              <h3 class="ghwp-title">Register your community</h3>
+              <span class="ghwp-subtitle">Select one or more your GroupHub community to syinc their asks, blogs, events to your wordpress base website. You can more setting each asks, blogs, events, later. But, you need to register it first. So, go on...</span>
+            </div>
+
+            <div class="ghwp-unreg-community">
+              <h4 class="ghwp-subtitle">Your Community (unregistered)</h4>
+              <select name="from[]" class="multiselect form-ctrl" size="8" multiple="multiple" data-right="#multiselect_to_community" data-right-all="#right_All_community" data-right-selected="#right_Selected_community" data-left-all="#left_All_community" data-left-selected="#left_Selected_community">
+                  <option value="1">Item 1</option>
+                  <option value="3">Item 3</option>
+                  <option value="2">Item 2</option>
+                  <option value="4">Item 4</option>
+                  <option value="6">Item 6</option>
+                  <option value="5">Item 5</option>
+                  <option value="7">Item 7</option>
+                  <option value="8">Item 8</option>
+              </select>
+            </div>
+            <ul class="ghwp-reg-action">
+              <li><a href="#" id="right_All_community" title="Register all" ><i class="icon-fast-fw-outline"></i></a></li>
+              <li><a href="#" id="right_Selected_community" title="Register by one " ><i class="icon-play-outline"></i></a></li>
+              <li><a href="#" id="left_Selected_community" title="Unregister by one " ><i class="icon-play-outline ftl-reverse"></i></a></li>
+              <li><a href="#" id="left_All_community" title="Unregister all" ><i class="icon-rewind-outline"></i></a></li>
+            </ul>
+            <div class="ghwp-regd-community">
+              <h4 class="ghwp-subtitle">Your Community (registered)</h4>
+              <select name="to[]" id="multiselect_to_community" class="form-ctrl" size="8" multiple="multiple"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="ghwp-tab-content-item" id="askSetting">
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #4</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #5</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #6</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ghwp-tab-content-item" id="blogSetting">
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #7</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #8</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #9</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ghwp-tab-content-item" id="eventSetting">
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #1</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #2</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+          <div class="ghwp-form-group">
+            <label for="askSetting1">Community #2</label>
+            <div class="ctrl-label ctrl-label-inline">
+              <select class="form-ctrl chosen-select" id="askSetting1" style="width:260px;" multiple tabindex="1" data-placeholder="Choose category">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+              <select class="form-ctrl chosen-select" id="askSetting1" multiple data-placement="Choose author" style="width: 260px;">
+                <option>Category 1</option>
+                <option>Category 2</option>
+                <option>Category 3</option>
+                <option>Category 4</option>
+                <option>Category 5</option>
+                <option>Category 6</option>
+                <option>Category 7</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layout-breaker"></div>
+    </div>
+  </div><!--/.layout-wrap-->
+  <!-- <footer class="layout-footer"></footer> -->
+  <!--/.layout-footer-->
+
+  <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+  <!--app:js-->
+  <!--/app:js-->
+  <!-- @endif -->
+
+  <!-- @if NODE_ENV == 'DISTRIBUTION' -->
+  <script src="scripts/app.all.min.js"></script>
+  <!-- @endif -->
+</body>
+</html>
